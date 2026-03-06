@@ -20,7 +20,7 @@ RUN apt update && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-configure ldap && \
     docker-php-ext-configure imap --with-kerberos --with-imap-ssl && \
-    docker-php-ext-install pdo pdo_mysql gd intl ldap zip imap && \
+    docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql gd intl ldap zip imap && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
